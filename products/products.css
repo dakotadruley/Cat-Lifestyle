@@ -1,12 +1,8 @@
-.images {
+img {
     height: 40%;
     width: 40%;
 }
 
-.inventoryItem {
-    border-color: black;
+#catAccessories {
     border-style: solid;
-    height: 60%;
-    width: 60%;
-    padding: 1%;
 }
