@@ -1,11 +1,22 @@
+export default catAccessories;
+
+const catAccessories = [
+    catBed,
+    catHammock,
+    catTree,
+    catTunnel,
+    catDazzler,
+    catFuzz,
+    catToy
+];
 
 const catBed = {
     id: 'catBed',
     name: 'Plush cat bed',
     image: 'catBed.png',
     description: 'Plush round pet bed sure to ease anxiety and offer warm and fluffly cuddles to your kitty.',
-    category: 'catAccessories',
-    price: 29,
+    category: 'catLife',
+    price: 29.00,
 }
 
 const catHammock = {
@@ -13,7 +24,7 @@ const catHammock = {
     name:
     image:
     description:
-    category:
+    category: 'catLife',
     price: 
 }
 
