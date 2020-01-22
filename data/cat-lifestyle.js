@@ -20,8 +20,8 @@ const catBed = {
 }
 
 const catHammock = {
-    id:
-    name:
+    id: 'catHammock'
+    name: 
     image:
     description:
     category: 'catLife',
