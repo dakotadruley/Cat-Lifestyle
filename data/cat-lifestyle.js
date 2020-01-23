@@ -1,5 +1,3 @@
-
-
 const catBed = {
     id: 'catBed',
     name: 'Plush cat bed',
@@ -60,7 +58,7 @@ const catToy = {
     image: 'catToy.jpg',
     description: 'Faux fur and feathers make this little toy irresistable to any kitty.',
     category: 'catLife',
-    price: 8.00
+    price: 8.00,
 };
 
 const catAccessories = [

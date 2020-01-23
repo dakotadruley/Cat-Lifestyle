@@ -3,5 +3,21 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+    color: whitesmoke;
+}
+
+.button {
+    height: 30px;
+    width: 70px;
+    background-color: rgb(212, 180, 73);
+    border-color: whitesmoke;
+    border-style: solid;
+    border-width: thick;
+
+}
+/* Look up flex box and float */
+li {
+    list-style: none;
 }
