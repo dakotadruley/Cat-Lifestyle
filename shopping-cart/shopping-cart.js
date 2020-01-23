@@ -1,13 +1,26 @@
-import cart from '../data/cart.js';
+import myCart from '../data/cart.js';
 import catAccessories from '../data/cat-lifestyle.js';
-import updateCatItem from '../products/render-cat-lifestyle.js';
-import { calcLineItemimport, findById } from '../common/utils.js';
+import { calcLineItem, findById, calcOrderItem} from '../common/utils.js';
+import renderLineItem from './render-line-item.js';
 
 
 const table = document.getElementById('tableBody');
+const total = document.getElementById('total');
 
-cart.forEach(cartItem => {
-    findById(cartItem.id, catAccessories);
-    updateCatItem(catItem)
-    // check out what findById returns
-}) 
+myCart.forEach(cartItem => {
+    const catItem = findById(cartItem.id, catAccessories);
+    const update = renderLineItem(myCart, catItem);
+
+    table.appendChild(update);
+});
+
+total.textContent = calcLineItem(myCart, catAccessories);
+
+const orderTotal = calcOrderItem(myCart, catAccessories);
+total.textContent = orderTotal;
+
+// check out what findById(id, array)
+// returns match true else null
+
+//updateCatItem(catItem) 
+//returns an li

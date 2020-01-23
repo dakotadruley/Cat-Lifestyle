@@ -18,3 +18,16 @@ export function findById(id, array) {
     });
 }
 
+// This function takes the cart array and products array.
+// Calculate the total of your cart data as the expected value.
+export function calcOrderItem(myCart, catAccessories) {
+    let orderTotal = 0;
+
+    myCart.forEach(cartItem => {
+        const catItem = findById(catAccessories, cartItem.id);
+        const cartItemTotal = calcLineItem(cartItem.quanity, catItem.price);
+        orderTotal += cartItemTotal;
+        
+    });
+    return orderTotal;
+}
