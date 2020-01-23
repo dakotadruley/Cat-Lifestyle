@@ -7,7 +7,7 @@ function renderLineItem(cartItem, catItem) {
     const tr = document.createElement('tr');
 
     const tdName = document.createElement('td');
-    tdName.textContent = cartItem.name;
+    tdName.textContent = catItem.name;
     tr.appendChild(tdName);
 
     const tdQuantity = document.createElement('td');

@@ -1,7 +1,7 @@
 // this function takes quanity and amount and returns a total
 
-export function calcLineItem(quanity, price) {
-    const amount = quanity * price;
+export function calcLineItem(quantity, price) {
+    const amount = quantity * price;
     return Math.round(amount * 100) / 100;
 }
 
@@ -10,12 +10,13 @@ export function calcLineItem(quanity, price) {
 // Will return null if no match is found
 
 export function findById(id, array) {
+    let result = null;
+
     array.forEach(arrayItem => {
-        if (id === arrayItem) {
-            return true; } 
-            
-        else return null;
+        if (id === arrayItem.id) {
+            result = arrayItem; } 
     });
+    return result;
 }
 
 // This function takes the cart array and products array.
@@ -24,10 +25,9 @@ export function calcOrderItem(myCart, catAccessories) {
     let orderTotal = 0;
 
     myCart.forEach(cartItem => {
-        const catItem = findById(catAccessories, cartItem.id);
-        const cartItemTotal = calcLineItem(cartItem.quanity, catItem.price);
+        const catItem = findById(cartItem.id, catAccessories);
+        const cartItemTotal = calcLineItem(cartItem.quantity, catItem.price);
         orderTotal += cartItemTotal;
-        
     });
     return orderTotal;
 }

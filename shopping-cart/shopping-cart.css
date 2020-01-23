@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+#table {
+    height: 50%;
+    width: 50%;
+    border-color: whitesmoke;
+    border-style: solid;
+    padding: 5px;
+}
+
+tbody, th {
+    border-style: solid;
+}
