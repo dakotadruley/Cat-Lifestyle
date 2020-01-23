@@ -1,5 +1,3 @@
-
-
 const catBed = {
     id: 'catBed',
     name: 'Plush cat bed',
