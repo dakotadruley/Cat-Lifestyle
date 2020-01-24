@@ -1,20 +1,12 @@
-const myCart = [
-    {
-        id: 'catBed',
-        quantity: 1,
-    },
-    {
-        id: 'catHideaway',
-        quantity: 1,
-    },
-    {
-        id: 'catFuzz',
-        quantity: 5,
-    },
-    {
-        id: 'catToy',
-        quantity: 2,
-    },
-];
+const cart = [{
+    id: 'catBed',
+    quantity: 1,
+}, {
+    id: 'catHideaway',
+    quantity: 1,
+}, {
+    id: 'catToy',
+    quantity: 3,
+}];
 
-export default myCart;
+export default cart;
