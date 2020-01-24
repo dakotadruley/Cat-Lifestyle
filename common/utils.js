@@ -21,13 +21,13 @@ export function findById(id, array) {
 
 // This function takes the cart array and products array.
 // Calculate the total of your cart data as the expected value.
-export function calcOrderItem(myCart, catAccessories) {
+export function calcOrderItem(cart, catAccessories) {
     let orderTotal = 0;
 
-    myCart.forEach(cartItem => {
+    cart.forEach(cartItem => {
         const catItem = findById(cartItem.id, catAccessories);
         const cartItemTotal = calcLineItem(cartItem.quantity, catItem.price);
         orderTotal += cartItemTotal;
     });
-    return orderTotal;
+    return '$ ' + orderTotal.toFixed(2);
 }
