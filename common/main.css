@@ -9,15 +9,19 @@ body {
 }
 
 .button {
-    height: 30px;
-    width: 70px;
+    height: 50px;
+    width: 80px;
     background-color: rgb(212, 180, 73);
     border-color: whitesmoke;
     border-style: solid;
     border-width: thick;
-
 }
 /* Look up flex box and float */
+
+nav {
+    display: inline;
+}
+
 li {
     list-style: none;
 }
@@ -26,3 +30,9 @@ footer {
     padding-top: 80%;
     font-size: small;
 }
+
+ a {
+     color: white;
+     font-size: small;
+     font-weight: bold;
+ }

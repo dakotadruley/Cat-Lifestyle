@@ -1,8 +1,12 @@
 img {
     height: 40%;
     width: 40%;
+    border-style: solid;
+    border-color: rgb(212, 180, 73);
+    border-width: thick;
+    
 }
 
 #catAccessories {
-    border-style: solid;
+    
 }

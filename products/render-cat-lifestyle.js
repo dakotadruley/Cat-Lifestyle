@@ -1,6 +1,7 @@
 import { findById } from '../common/utils.js';
 
 export default function updateCatItem(catItem) {
+    
     const li = document.createElement('li');
     li.className = catItem.category;
     li.title = catItem.description;
