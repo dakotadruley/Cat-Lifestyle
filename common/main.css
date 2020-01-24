@@ -21,3 +21,8 @@ body {
 li {
     list-style: none;
 }
+
+footer {
+    padding-top: 80%;
+    font-size: small;
+}

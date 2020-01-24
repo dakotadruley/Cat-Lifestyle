@@ -1,10 +1,18 @@
-import cart from '../data/cart.js';
 import catAccessories from '../data/cat-lifestyle.js';
 import { findById, calcOrderItem } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
 
 const table = document.getElementById('tableBody');
 const total = document.getElementById('total');
+const placeOrder = document.getElementById('placeOrder');
+
+const json = localStorage.getItem('CART');
+let cart;
+if (json) {
+    cart = JSON.parse(json);
+} else {
+    cart = [];
+}
 
 cart.forEach(cartItem => {
     const catItem = findById(cartItem.id, catAccessories);
@@ -16,8 +24,13 @@ cart.forEach(cartItem => {
 const orderTotal = calcOrderItem(cart, catAccessories);
 total.textContent = orderTotal;
 
-// check out what findById(id, array)
-// returns match true else null
+if (cart.length === 0) {
+    placeOrder.disabled = true;
+} else {
+    placeOrder.addEventListener('click', () => {
+        localStorage.removeItem('CART');
+        alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+        window.location = '../';
+    });
 
-//updateCatItem(catItem) 
-//returns an li
+}
