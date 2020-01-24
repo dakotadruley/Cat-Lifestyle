@@ -27,12 +27,29 @@ li {
 }
 
 footer {
-    padding-top: 80%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     font-size: small;
+    text-align: center;
+    background-color: rgb(212, 180, 73);
+    font-weight: bold;
 }
 
  a {
      color: white;
      font-size: small;
      font-weight: bold;
+ }
+
+ .cats {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .cats > img {
+    width: 100px;
+    text-align: center;
+    margin: 10px;
  }
