@@ -9,15 +9,47 @@ body {
 }
 
 .button {
-    height: 30px;
-    width: 70px;
+    height: 50px;
+    width: 80px;
     background-color: rgb(212, 180, 73);
     border-color: whitesmoke;
     border-style: solid;
     border-width: thick;
-
 }
 /* Look up flex box and float */
+
+nav {
+    display: inline;
+}
+
 li {
     list-style: none;
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: small;
+    text-align: center;
+    background-color: rgb(212, 180, 73);
+    font-weight: bold;
+}
+
+ a {
+     color: white;
+     font-size: small;
+     font-weight: bold;
+ }
+
+ .cats {
+    display: flex;
+    flex-wrap: wrap;
+ }
+
+ .cats > img {
+    width: 100px;
+    text-align: center;
+    margin: 10px;
+ }

@@ -1,4 +1,7 @@
+import { findById } from '../common/utils.js';
+
 export default function updateCatItem(catItem) {
+    
     const li = document.createElement('li');
     li.className = catItem.category;
     li.title = catItem.description;
@@ -19,10 +22,41 @@ export default function updateCatItem(catItem) {
 
     const addButton = document.createElement('button');
     addButton.textContent = 'Add';
-    addButton.value = catItem.code;
+    addButton.value = catItem.id;
+    addButton.addEventListener('click', () => {
+
+        let json = localStorage.getItem('CART');
+        let cart;
+        if (json) {
+            cart = JSON.parse(json);
+        } else {
+            cart = [];
+        }
+
+        let cartItem = findById(catItem.id, cart);
+
+        if (!cartItem) {
+            cartItem = {
+                id: catItem.id,
+                quantity: 1
+            };
+
+            cart.push(cartItem);
+        } else {
+            cartItem.quantity++;
+        }
+
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+
+        alert('1 ' + catItem.name + ' added to cart');
+    });
+
     p.appendChild(addButton);
 
     li.appendChild(p);
 
     return li;
 }
+
+

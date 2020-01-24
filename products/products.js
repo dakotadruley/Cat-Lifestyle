@@ -1,5 +1,5 @@
 import catAccessories from '../data/cat-lifestyle.js';
-import updateCatItem from './render-cat-lifestyle.js';
+import updateCatItem from './update-cat-item.js';
 
 const ul = document.getElementById('catAccessories');
 
