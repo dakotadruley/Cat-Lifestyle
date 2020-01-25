@@ -13,31 +13,31 @@
 
 <nav>
     <ul>
-    <button class='button'><li><a href='/index.html'>Home</a></li></button>
-    <button class='button'><li><a href='../products/index.html'>Inventory</a></li></button>
+    <button class='button'><li><a class='buttonFont' href='/index.html'>Home</a></li></button>
+    <button class='button'><li><a class='buttonFont' href='../products/index.html'>Inventory</a></li></button>
     </ul>
 </nav>
 
 <table id='table'>
     <thead>
-        <tr>
+        <tr class='tableBorder'>
             <th>Product</th>
             <th>Quantity</th>
             <th>Total</th>
-        </tr>
+        </trclass='tableBorder'>
     </thead>
     <tbody id='tableBody'>
     </tbody>
     <tfoot>
-        <tr>
+        <tr class='tableBorder'>
             <th>Order Total</th>
-            <th id='total'>$</th>
+            <th colspan='2' id='total'>$</th>
         </tr>
     </tfoot>
 
 </table>
 <br>
-<button class='button' id='placeOrder'><a>Place Order</a></button>
+<button class='button' id='placeOrder'><a class='buttonFont'>Place Order</aclass='buttonFont></button>
     <script type="module" src="shopping-cart.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+import getCart from './get-cart.js';
 import catAccessories from '../data/cat-lifestyle.js';
 import { findById, calcOrderItem } from '../common/utils.js';
 import renderLineItem from './render-line-item.js';
@@ -6,13 +7,7 @@ const table = document.getElementById('tableBody');
 const total = document.getElementById('total');
 const placeOrder = document.getElementById('placeOrder');
 
-const json = localStorage.getItem('CART');
-let cart;
-if (json) {
-    cart = JSON.parse(json);
-} else {
-    cart = [];
-}
+let cart = getCart();
 
 cart.forEach(cartItem => {
     const catItem = findById(cartItem.id, catAccessories);
@@ -34,3 +29,5 @@ if (cart.length === 0) {
     });
 
 }
+
+

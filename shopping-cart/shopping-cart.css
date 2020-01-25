@@ -1,14 +1,32 @@
 * {
     box-sizing: border-box;
 }
+
 #table {
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 60%;
     border-color: whitesmoke;
     border-style: solid;
     padding: 5px;
+    font-size: 18pt;
 }
 
-tbody, th {
+.tableBorder {
+    border-color: whitesmoke;
     border-style: solid;
+    background-color: rgb(233, 150, 122);
+}
+
+.quantity {
+    text-align: center;
+}
+
+.total {
+    font-weight: bold;
+}
+
+.quantity, .name, .total {
+    border-color: whitesmoke;
+    border-style: solid;
+    padding: 5pt;
 }

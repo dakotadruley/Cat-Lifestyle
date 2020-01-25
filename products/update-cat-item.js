@@ -3,7 +3,7 @@ import { findById } from '../common/utils.js';
 export default function updateCatItem(catItem) {
     
     const li = document.createElement('li');
-    li.className = catItem.category;
+    li.classList.add(catItem.category);
     li.title = catItem.description;
 
     const h3 = document.createElement('h3');
@@ -17,7 +17,7 @@ export default function updateCatItem(catItem) {
 
     const p = document.createElement('p');
     p.className = 'price';
-    const ItemPrice = '$' + catItem.price.toFixed(2);    
+    const ItemPrice = '$ ' + catItem.price.toFixed(2);    
     p.textContent = ItemPrice;
 
     const addButton = document.createElement('button');
@@ -60,3 +60,4 @@ export default function updateCatItem(catItem) {
 }
 
 
+// $ + could be it's own function. Then only change in one place. 

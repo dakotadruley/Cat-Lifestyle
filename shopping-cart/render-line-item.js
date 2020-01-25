@@ -8,19 +8,18 @@ function renderLineItem(cartItem, catItem) {
 
     const tdName = document.createElement('td');
     tdName.textContent = catItem.name;
+    tdName.classList.add('name');
     tr.appendChild(tdName);
 
     const tdQuantity = document.createElement('td');
     tdQuantity.textContent = cartItem.quantity;
+    tdQuantity.classList.add('quantity');
     tr.appendChild(tdQuantity); 
-
-    const tdPrice = document.createElement('td');
-    tdPrice.textContent = cartItem.price;
-    tr.appendChild(tdPrice);
 
     const tdTotal = document.createElement('td');
     const total = calcLineItem(cartItem.quantity, catItem.price);
     tdTotal.textContent = total;
+    tdTotal.classList.add('total');
     tr.appendChild(tdTotal);
 
     return tr;

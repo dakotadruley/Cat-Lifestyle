@@ -8,15 +8,26 @@ body {
     color: whitesmoke;
 }
 
+.intro {
+    font-size: large;
+    background-color: darksalmon;
+    padding: 5pt;
+    border-color: whitesmoke;
+    border-style: solid;
+}
+
 .button {
-    height: 50px;
-    width: 80px;
+    height: 60px;
+    width: 100px;
     background-color: rgb(212, 180, 73);
     border-color: whitesmoke;
     border-style: solid;
     border-width: thick;
 }
-/* Look up flex box and float */
+
+.buttonFont {
+    font-size: large;
+}
 
 nav {
     display: inline;
@@ -44,8 +55,11 @@ footer {
  }
 
  .cats {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; 
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
  }
 
  .cats > img {
@@ -53,3 +67,5 @@ footer {
     text-align: center;
     margin: 10px;
  }
+
+ 
